@@ -1,7 +1,6 @@
 class VariancesController < ApplicationController
   def index
     variance = sample_variance(Dataset.all.pluck(:temperature))
-    puts "variance == #{variance}"
     render json: variance.to_f, status: 200
   end
 
