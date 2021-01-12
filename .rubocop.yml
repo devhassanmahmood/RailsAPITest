@@ -1,0 +1,14 @@
+Documentation:
+  Enabled: false
+AllCops:
+  NewCops: enable
+  Exclude:
+  - 'node_modules/**/*'
+  - 'tmp/**/*'
+  - 'vendor/**/*'
+  - 'db/schema.rb'
+  - 'bin/**/*'
+  - 'config/**/*'
+  - 'db/migrate/*.rb'
+  - 'app/services/**/*'
+  

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class DatasetsController < ApplicationController
   before_action :set_dataset, only: %i[show edit update destroy]
   skip_before_action :verify_authenticity_token
-  
+
   # GET /datasets.json
   def index
     @datasets = Dataset.all
@@ -43,8 +45,8 @@ class DatasetsController < ApplicationController
 
   def set_dataset
     @dataset = Dataset.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      render json: { message: 'Record not found' }, status: 404
+  rescue ActiveRecord::RecordNotFound
+    render json: { message: 'Record not found' }, status: 404
   end
 
   def dataset_params
